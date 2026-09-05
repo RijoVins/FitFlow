@@ -79,6 +79,113 @@ h1, h2 { margin: 0; color: #10221c; font-family: Georgia, serif; font-weight: 40
 .portal-panel h1 { font-size: clamp(46px, 7vw, 78px); }
 .portal-description { max-width: 480px; margin-top: 24px; color: #708077; font-size: 18px; }
 .portal-placeholder { display: inline-block; margin-top: 42px; padding: 14px 18px; border-left: 3px solid #e15936; background: #e9efe8; color: #40564b; font-size: 14px; }
+.member-portal { display: grid; grid-template-columns: 240px 1fr; min-height: calc(100svh - 160px); margin-top: 24px; border: 1px solid #d8e0d8; background: #fbfcf9; }
+.member-sidebar { padding: 28px 18px; border-right: 1px solid #d8e0d8; background: #eef3ed; }
+.member-profile { display: flex; align-items: center; gap: 10px; padding: 0 10px 28px; border-bottom: 1px solid #d8e0d8; }
+.member-avatar, .member-empty-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; color: #fff; background: #e15936; font-size: 12px; font-weight: 800; }
+.trainer-avatar { background: #365e4c; }
+.member-profile strong, .member-profile span { display: block; }
+.member-profile strong { color: #10221c; font-size: 13px; }
+.member-profile div span { margin-top: 3px; color: #7a8a80; font-size: 11px; }
+.member-menu-label { margin: 28px 10px 11px; color: #8b998f; font-size: 10px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; }
+.member-nav { display: flex; flex-direction: column; gap: 2px; }
+.member-nav button { display: flex; align-items: center; gap: 10px; padding: 11px 10px; border: 0; border-radius: 2px; color: #62736a; background: transparent; cursor: pointer; text-align: left; font-size: 12px; }
+.member-nav button:hover, .member-nav button.active { color: #10221c; background: #fff; }
+.member-nav button.active { box-shadow: inset 3px 0 #e15936; font-weight: 800; }
+.member-nav-mark { width: 5px; height: 5px; border: 1px solid #a1afa5; border-radius: 50%; }
+.member-nav button.active .member-nav-mark { border-color: #e15936; background: #e15936; }
+.member-content { padding: 42px 48px 58px; background: #f8faf6; }
+.member-heading { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 34px; }
+.member-heading .eyebrow { margin-bottom: 12px; }
+.member-heading h1 { font-size: clamp(38px, 5vw, 56px); }
+.notification-button { width: 30px; height: 30px; border: 1px solid #d8e0d8; border-radius: 50%; color: #fff; background: #e15936; cursor: pointer; font-size: 11px; }
+.member-welcome { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 26px 28px; color: #fff; background: #193228; }
+.member-kicker { color: #f1a288; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+.member-welcome h2 { margin-top: 9px; color: #fff; font-size: 30px; }
+.member-welcome p { margin: 10px 0 0; color: #c8d7cc; font-size: 13px; }
+.member-primary-button { padding: 13px 16px; border: 0; border-radius: 2px; color: #fff; background: #e15936; cursor: pointer; font-size: 12px; font-weight: 800; white-space: nowrap; }
+.member-primary-button span { margin-left: 16px; font-size: 16px; }
+.member-primary-button:hover { background: #bd4427; }
+.member-stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 18px; }
+.member-stat-grid article { padding: 20px; border: 1px solid #d8e0d8; background: #fff; }
+.member-stat-grid span, .member-stat-grid em { display: block; color: #77877d; font-size: 11px; font-style: normal; }
+.member-stat-grid strong { display: block; margin: 13px 0 5px; color: #10221c; font-family: Georgia, serif; font-size: 34px; font-weight: 400; }
+.member-stat-grid small { font-family: 'Trebuchet MS', 'Avenir Next', sans-serif; font-size: 12px; }
+.member-stat-grid em { color: #e15936; font-size: 10px; }
+.member-dashboard-grid { display: grid; grid-template-columns: 1.3fr .9fr; gap: 12px; margin-top: 18px; }
+.member-card { padding: 22px; border: 1px solid #d8e0d8; background: #fff; }
+.member-card-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.member-card h3 { margin: 0; color: #10221c; font-family: Georgia, serif; font-size: 21px; font-weight: 400; }
+.member-card-heading button { padding: 0; border: 0; color: #e15936; background: transparent; cursor: pointer; font-size: 11px; font-weight: 800; }
+.workout-row { display: flex; align-items: center; gap: 12px; padding: 14px 0; border-top: 1px solid #e6ece5; }
+.workout-icon { display: grid; place-items: center; width: 30px; height: 30px; color: #e15936; background: #fbe7e1; font-size: 10px; font-weight: 800; }
+.trainer-icon { width: 44px; color: #365e4c; background: #e6efe7; font-size: 9px; }
+.workout-row div { flex: 1; }
+.workout-row strong, .workout-row div span { display: block; }
+.workout-row strong { color: #34483d; font-size: 12px; }
+.workout-row div span { margin-top: 4px; color: #87958b; font-size: 11px; }
+.workout-status { color: #43815a; font-size: 11px; font-weight: 800; }
+.workout-status.muted { color: #9aa79e; }
+.membership-name { margin: 4px 0 10px; color: #34483d; font-size: 14px; font-weight: 800; }
+.membership-pill { display: inline-block; padding: 5px 8px; color: #43815a; background: #e6f2e8; font-size: 10px; font-weight: 800; }
+.membership-details { display: grid; grid-template-columns: 1fr; gap: 5px; margin-top: 28px; padding-top: 16px; border-top: 1px solid #e6ece5; }
+.membership-details span { color: #87958b; font-size: 10px; }
+.membership-details strong { margin-bottom: 7px; color: #34483d; font-size: 12px; }
+.trainer-progress-value { display: block; margin: 7px 0 12px; color: #365e4c; font-family: Georgia, serif; font-size: 42px; }
+.trainer-progress-bar { height: 7px; overflow: hidden; background: #e4ebe4; }
+.trainer-progress-bar span { display: block; width: 89%; height: 100%; background: #365e4c; }
+.branch-avatar { background: #b76538; }
+.branch-nav { gap: 13px; }
+.branch-nav-group { display: flex; flex-direction: column; gap: 2px; }
+.branch-nav-label { margin: 0 10px 3px; color: #9aa79e; font-size: 9px; font-weight: 800; letter-spacing: 1.1px; text-transform: uppercase; }
+.branch-nav button { padding-top: 8px; padding-bottom: 8px; font-size: 11px; }
+.branch-welcome { background: #344b3f; }
+.branch-stat-grid { grid-template-columns: repeat(4, 1fr); }
+.branch-stat-grid article strong { font-size: 28px; }
+.branch-alert-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
+.branch-alert { display: flex; align-items: center; gap: 11px; padding: 14px; border: 1px solid #ecd0c5; background: #fff8f5; }
+.payment-alert { border-color: #e8dfc0; background: #fffdf3; }
+.alert-mark { display: grid; place-items: center; flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; color: #fff; background: #e15936; font-size: 12px; font-weight: 800; }
+.payment-alert .alert-mark { background: #b89433; }
+.branch-alert div { flex: 1; }
+.branch-alert strong, .branch-alert div span { display: block; }
+.branch-alert strong { color: #34483d; font-size: 11px; }
+.branch-alert div span { margin-top: 4px; color: #87958b; font-size: 10px; }
+.branch-alert button { padding: 0; border: 0; color: #e15936; background: transparent; cursor: pointer; font-size: 11px; font-weight: 800; }
+.branch-icon { width: 44px; color: #b76538; background: #f8e9df; font-size: 9px; }
+.branch-pulse { display: grid; grid-template-columns: 1fr auto; gap: 9px 12px; align-items: center; }
+.branch-pulse span { color: #87958b; font-size: 11px; }
+.branch-pulse strong { color: #34483d; font-family: Georgia, serif; font-size: 24px; font-weight: 400; }
+.branch-pulse .trainer-progress-bar { grid-column: 1 / -1; width: 100%; margin-bottom: 8px; }
+.branch-pulse .trainer-progress-bar:first-of-type span { width: 68%; background: #b76538; }
+.branch-pulse .trainer-progress-bar.green span { width: 94%; background: #365e4c; }
+.company-avatar { background: #476b62; }
+.company-nav { gap: 12px; }
+.company-nav-group { display: flex; flex-direction: column; gap: 2px; }
+.company-nav button { padding-top: 7px; padding-bottom: 7px; font-size: 10px; }
+.company-welcome { background: #2f5148; }
+.company-stat-grid { grid-template-columns: repeat(4, 1fr); }
+.company-stat-grid article strong { font-size: 28px; }
+.company-performance { display: grid; grid-template-columns: 1.25fr .75fr; gap: 12px; margin-top: 18px; }
+.company-branches-card, .company-focus-card { min-height: 300px; }
+.company-branch-row { display: grid; grid-template-columns: 1fr auto; gap: 5px 16px; padding: 14px 0; border-top: 1px solid #e6ece5; }
+.company-branch-row div strong, .company-branch-row div span { display: block; }
+.company-branch-row div strong { color: #34483d; font-size: 12px; }
+.company-branch-row div span { margin-top: 4px; color: #87958b; font-size: 10px; }
+.company-branch-row > strong { color: #365e4c; font-family: Georgia, serif; font-size: 17px; font-weight: 400; }
+.company-bar { grid-column: 1 / -1; height: 5px; background: #e4ebe4; }
+.company-bar span { display: block; height: 100%; background: #476b62; }
+.company-focus-item { display: flex; align-items: center; gap: 11px; padding: 15px 0; border-top: 1px solid #e6ece5; }
+.company-focus-item div { flex: 1; }
+.company-focus-item strong, .company-focus-item div span { display: block; }
+.company-focus-item strong { color: #34483d; font-size: 11px; }
+.company-focus-item div span { margin-top: 4px; color: #87958b; font-size: 10px; }
+.company-alert-mark { background: #b89433; }
+.member-empty-state { max-width: 560px; margin: 80px auto; padding: 54px 30px; border: 1px solid #d8e0d8; background: #fff; text-align: center; }
+.member-empty-state .member-empty-mark { margin: 0 auto 22px; }
+.member-empty-state h2 { font-size: 44px; }
+.member-empty-state p { max-width: 380px; margin: 18px auto 0; color: #708077; font-size: 14px; line-height: 1.6; }
+.member-empty-state .member-primary-button { margin-top: 28px; }
 .footer { padding: 22px 0 28px; border-top: 1px solid #d8e0d8; color: #87938b; font-size: 12px; }
 .footer span { padding: 0 7px; color: #e15936; }
 
@@ -111,4 +218,19 @@ h1, h2 { margin: 0; color: #10221c; font-family: Georgia, serif; font-weight: 40
   .login-form { margin-top: 24px; padding: 24px; }
   .mobile-intro { display: block; margin-bottom: 26px; color: #708077; font-size: 15px; }
   .mobile-intro .eyebrow { margin-bottom: 8px; }
+  .member-portal { display: block; margin-top: 16px; }
+  .member-sidebar { padding: 18px 14px; border-right: 0; border-bottom: 1px solid #d8e0d8; }
+  .member-profile { padding-bottom: 16px; }
+  .member-menu-label { margin: 18px 8px 8px; }
+  .member-nav { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
+  .member-nav button { padding: 9px 8px; font-size: 11px; }
+  .member-content { padding: 28px 16px 40px; }
+  .member-heading { margin-bottom: 24px; }
+  .member-heading h1 { font-size: 38px; }
+  .member-welcome { display: block; padding: 22px; }
+  .member-welcome h2 { font-size: 26px; }
+  .member-welcome .member-primary-button { margin-top: 20px; }
+  .member-stat-grid, .member-dashboard-grid { grid-template-columns: 1fr; }
+  .company-performance, .branch-alert-row { grid-template-columns: 1fr; }
+  .company-nav { grid-template-columns: repeat(2, 1fr); }
 }

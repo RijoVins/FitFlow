@@ -5,6 +5,9 @@ import TrainerPortal from './portals/TrainerPortal'
 import BranchManagerPortal from './portals/BranchManagerPortal'
 import CompanyAdminPortal from './portals/CompanyAdminPortal'
 import SuperAdminPortal from './portals/SuperAdminPortal'
+import gymHero from './assets/gym-hero.jpg'
+import gymInterior from './assets/gym-interior.jpg'
+import gymTraining from './assets/gym-training.jpg'
 
 const portalViews = {
   member: MemberPortal,
@@ -16,21 +19,21 @@ const portalViews = {
 
 const heroSlides = [
   {
-    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85',
+    image: gymHero,
     alt: 'Athlete training inside a modern gym',
     eyebrow: 'The rhythm of a better studio',
     title: <>Make space<br />for stronger days.</>,
     description: 'FitFlow gives your gym the clarity to help people move, train, and keep coming back.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1800&q=85',
+    image: gymInterior,
     alt: 'Bright gym interior with workout equipment',
     eyebrow: 'A room full of momentum',
     title: <>Bring your<br />people together.</>,
     description: 'Keep your members, trainers, and teams moving in the same direction.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1800&q=85',
+    image: gymTraining,
     alt: 'Person lifting weights in a fitness studio',
     eyebrow: 'Progress looks different here',
     title: <>Built for<br />the next rep.</>,
@@ -94,7 +97,7 @@ function App() {
         <section className="login-page">
           <div className="login-visual">
             <img
-              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85"
+              src={gymHero}
               alt="Athlete training inside a modern gym"
             />
             <div className="visual-shade" />
@@ -156,9 +159,9 @@ function App() {
           </section>
 
           <section className="feature-strip" id="gyms">
-            <article className="feature-image feature-image-large"><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1000&q=85" alt="Bright gym interior with workout equipment" /></article>
+            <article className="feature-image feature-image-large"><img src={gymInterior} alt="Bright gym interior with workout equipment" /></article>
             <article className="feature-copy"><p className="eyebrow">Find your flow</p><h2>Good spaces<br />make good habits.</h2><p>Discover studios built around the way you want to train. Your next session is closer than you think.</p><a href="#contact">Find a nearby gym <span aria-hidden="true">-&gt;</span></a></article>
-            <article className="feature-image"><img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1000&q=85" alt="Person lifting weights in a fitness studio" /></article>
+            <article className="feature-image"><img src={gymTraining} alt="Person lifting weights in a fitness studio" /></article>
           </section>
 
           <section className="contact-section" id="contact">
