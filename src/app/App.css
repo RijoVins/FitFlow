@@ -7,6 +7,8 @@
 .main-nav { display: flex; align-items: center; gap: 30px; }
 .main-nav a { color: #53675d; text-decoration: none; font-size: 13px; }
 .main-nav a:hover { color: #e15936; }
+.main-nav button:not(.nav-login) { padding: 0; border: 0; color: #53675d; background: transparent; cursor: pointer; font-size: 13px; }
+.main-nav button:not(.nav-login):hover { color: #e15936; }
 .nav-login { padding: 10px 17px; border: 1px solid #e15936; border-radius: 2px; color: #e15936; background: transparent; cursor: pointer; font-size: 13px; font-weight: 800; }
 .nav-login:hover { color: #fff; background: #e15936; }
 
@@ -47,6 +49,11 @@ h1, h2 { margin: 0; color: #10221c; font-family: Georgia, serif; font-weight: 40
 .contact-form input, .contact-form textarea { width: 100%; padding: 14px 0; border: 0; border-bottom: 1px solid #cbd6cc; outline: 0; resize: vertical; color: #10221c; background: transparent; font: inherit; font-size: 14px; }
 .contact-form input:focus, .contact-form textarea:focus { border-color: #e15936; }
 .contact-form .hero-button { align-self: flex-start; }
+.contact-success { padding: 34px; border: 1px solid #e6f2e8; background: #f3faf4; text-align: center; }
+.contact-success .member-empty-mark { margin: 0 auto 16px; color: #43815a; }
+.contact-success h3 { margin: 0; color: #10221c; font-family: Georgia, serif; font-size: 24px; }
+.contact-success p { max-width: 320px; margin: 12px auto 0; color: #53675d; font-size: 13px; line-height: 1.6; }
+.contact-success .member-primary-button { margin-top: 24px; }
 
 .login-page { min-height: calc(100svh - 160px); display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(320px, 400px); align-items: center; gap: 8%; padding: 38px 7% 70px; }
 .login-visual { position: relative; min-height: 570px; overflow: hidden; color: #fff; background: #193228; }
@@ -69,6 +76,11 @@ h1, h2 { margin: 0; color: #10221c; font-family: Georgia, serif; font-weight: 40
 .login-button:hover { background: #bd4427; }
 .login-cancel { display: block; margin: 18px auto 0; padding: 0; border: 0; color: #708077; background: transparent; cursor: pointer; font-size: 12px; }
 .login-cancel:hover { color: #e15936; }
+.login-toggle { display: block; margin: 14px auto 0; padding: 0; border: 0; color: #e15936; background: transparent; cursor: pointer; font-size: 12px; font-weight: 800; }
+.login-toggle:hover { color: #bd4427; }
+.form-error-action { display: inline-block; margin: 10px 0 0; padding: 8px 14px; border: 1px solid #e15936; border-radius: 2px; color: #e15936; background: #fff8f5; cursor: pointer; font-size: 12px; font-weight: 800; }
+.form-error-action span { margin-left: 8px; }
+.form-error-action:hover { color: #fff; background: #e15936; }
 
 .portal-view { min-height: calc(100svh - 160px); padding: 48px 0 70px; }
 .back-button { padding: 0; border: 0; background: transparent; color: #708077; cursor: pointer; font-size: 14px; }
@@ -189,6 +201,61 @@ h1, h2 { margin: 0; color: #10221c; font-family: Georgia, serif; font-weight: 40
 .footer { padding: 22px 0 28px; border-top: 1px solid #d8e0d8; color: #87938b; font-size: 12px; }
 .footer span { padding: 0 7px; color: #e15936; }
 
+.gym-explorer { min-height: calc(100svh - 160px); padding: 48px 7% 70px; }
+.gym-explorer-header { margin-bottom: 48px; }
+.gym-explorer-title { margin-top: 32px; }
+.gym-explorer-title h1 { font-size: clamp(42px, 6vw, 72px); }
+.gym-explorer-title > p { max-width: 420px; margin: 18px 0 0; color: #708077; font-size: 16px; line-height: 1.6; }
+.gym-search-form { max-width: 640px; padding: 32px; border: 1px solid #d8e0d8; border-radius: 3px; background: #fbfcf9; }
+.gym-form-group { margin-bottom: 28px; }
+.gym-form-group label { display: block; margin-bottom: 10px; color: #40564b; font-size: 12px; font-weight: 800; }
+.gym-form-group input { width: 100%; height: 48px; padding: 0 14px; border: 1px solid #cbd6cc; border-radius: 2px; outline: 0; color: #10221c; background: #f5f7f2; font-size: 14px; }
+.gym-form-group input:focus { border-color: #e15936; box-shadow: 0 0 0 3px rgba(225, 89, 54, .12); }
+.gender-options { display: flex; gap: 12px; }
+.gender-option { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px; border: 2px solid #d8e0d8; border-radius: 3px; background: transparent; cursor: pointer; transition: all .2s; }
+.gender-option:hover { border-color: #a1afa5; }
+.gender-option.active { border-color: #e15936; background: #fff8f5; }
+.gender-icon { font-size: 28px; color: #708077; }
+.gender-option.active .gender-icon { color: #e15936; }
+.gender-option span:last-child { font-size: 13px; font-weight: 800; color: #40564b; }
+.gym-search-button { width: 100%; height: 50px; margin-top: 8px; border: 0; border-radius: 2px; color: #fff; background: #e15936; cursor: pointer; font-size: 14px; font-weight: 800; }
+.gym-search-button span { margin-left: 12px; font-size: 18px; }
+.gym-search-button:hover { background: #bd4427; }
+.gym-search-button:disabled { opacity: .5; cursor: not-allowed; }
+.gym-results { margin-top: 48px; }
+.gym-results-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+.gym-results-header h2 { font-size: 24px; }
+.gym-reset-button { padding: 0; border: 0; color: #e15936; background: transparent; cursor: pointer; font-size: 13px; font-weight: 800; }
+.gym-reset-button:hover { color: #bd4427; }
+.gym-empty-state { padding: 60px 30px; border: 1px solid #d8e0d8; background: #fff; text-align: center; }
+.gym-empty-icon { display: block; margin-bottom: 18px; font-size: 48px; }
+.gym-empty-state h3 { margin: 0; color: #10221c; font-family: Georgia, serif; font-size: 28px; }
+.gym-empty-state p { max-width: 320px; margin: 12px auto 0; color: #708077; font-size: 14px; }
+.gym-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.gym-card { padding: 24px; border: 1px solid #d8e0d8; background: #fff; transition: box-shadow .2s; }
+.gym-card:hover { box-shadow: 0 8px 24px rgba(28, 52, 42, .08); }
+.gym-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
+.gym-card-icon { font-size: 36px; }
+.gym-card-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.gym-card-badge { padding: 4px 8px; border-radius: 2px; font-size: 10px; font-weight: 800; text-transform: uppercase; }
+.gym-card-badge.both { color: #365e4c; background: #e6f2e8; }
+.gym-card-badge.male { color: #476b62; background: #e6efe7; }
+.gym-card-badge.female { color: #b76538; background: #f8e9df; }
+.gym-card-distance { color: #87958b; font-size: 11px; }
+.gym-card h3 { margin: 0; color: #10221c; font-family: Georgia, serif; font-size: 20px; }
+.gym-card-address { max-width: 240px; margin: 8px 0 14px; color: #708077; font-size: 12px; line-height: 1.5; }
+.gym-card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.gym-card-tag { padding: 4px 8px; background: #f5f7f2; color: #53675d; font-size: 10px; font-weight: 800; }
+.gym-card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px solid #e6ece5; }
+.gym-card-rating { color: #e15936; font-size: 13px; font-weight: 800; }
+.gym-card-members { color: #87958b; font-size: 11px; }
+.gym-card-button { width: 100%; margin-top: 16px; padding: 12px; border: 1px solid #e15936; border-radius: 2px; color: #e15936; background: transparent; cursor: pointer; font-size: 12px; font-weight: 800; }
+.gym-card-button span { float: right; font-size: 16px; }
+.gym-card-button:hover { color: #fff; background: #e15936; }
+.feature-link { padding: 0; border: 0; color: #e15936; background: transparent; cursor: pointer; font-size: 13px; font-weight: 800; }
+.feature-link span { margin-left: 12px; font-size: 18px; }
+.feature-link:hover { color: #bd4427; }
+
 @media (max-width: 760px) {
   .app-shell { padding: 0 20px; }
   .topbar { height: 72px; }
@@ -233,4 +300,9 @@ h1, h2 { margin: 0; color: #10221c; font-family: Georgia, serif; font-weight: 40
   .member-stat-grid, .member-dashboard-grid { grid-template-columns: 1fr; }
   .company-performance, .branch-alert-row { grid-template-columns: 1fr; }
   .company-nav { grid-template-columns: repeat(2, 1fr); }
+  .gym-explorer { padding: 32px 0 50px; }
+  .gym-explorer-header { margin-bottom: 32px; }
+  .gym-explorer-title h1 { font-size: 38px; }
+  .gym-search-form { padding: 24px; }
+  .gym-grid { grid-template-columns: 1fr; }
 }
